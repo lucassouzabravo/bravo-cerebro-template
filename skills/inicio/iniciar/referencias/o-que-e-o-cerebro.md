@@ -6,6 +6,22 @@ Leva ~4 minutos. Vale cada segundo: quem entende o modelo consegue consertar soz
 
 ---
 
+## 0. De onde isto veio
+
+Antes de qualquer explicação, diga a procedência. Em duas frases, com as suas palavras:
+
+> "Isto não é template genérico. É o cérebro que o **Lucas** e a **Banguela** construíram juntos trabalhando na Bravo, e adaptaram pra que outras pessoas pudessem ter o próprio."
+
+E o que isso significa na prática, que é o que interessa:
+
+- **A estrutura já roda.** Não é proposta, é o que eles usam todo dia.
+- **Cada regra aqui tem uma cicatriz atrás.** A regra dos três gatilhos, o `git add` com caminho explícito, o campo Sensibilidade em cada pasta — nada disso foi inventado no papel. Cada uma nasceu de alguma coisa que deu errado antes.
+- **Você começa de um lugar que já funciona**, e adapta pro seu jeito de trabalhar.
+
+Se a pessoa quiser a história inteira, o `CREDITOS.md` na raiz conta.
+
+---
+
 ## 1. O problema que isto resolve
 
 Comece pela dor, não pela solução.

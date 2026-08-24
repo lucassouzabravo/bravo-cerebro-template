@@ -73,7 +73,13 @@ A ordem importa. Os passos 3 a 7 dependem do 2 (sem GitHub conectado, nada sobe)
 
 Antes de configurar qualquer coisa, a pessoa precisa entender o modelo. Configuração sem modelo mental vira sequência de cliques que ninguém consegue repetir nem consertar.
 
-Ler `referencias/o-que-e-o-cerebro.md` e conduzir a explicação a partir dele. **Não despejar o arquivo inteiro** — é roteiro para você, não texto para colar.
+**Abrir dizendo de onde isto veio.** Não é formalidade: saber que a estrutura já roda de verdade muda como a pessoa a trata. Em duas frases, com as suas palavras:
+
+> "Antes de começar: isto aqui não é template genérico baixado da internet. É o cérebro que o Lucas e a Banguela construíram juntos ao longo de meses trabalhando na Bravo, e que eles adaptaram pra que outras pessoas pudessem ter o próprio. Cada regra que você vai ver aqui existe porque alguma coisa deu errado antes e ensinou. Você tá começando de um lugar que já funciona."
+
+Se a pessoa quiser saber mais, o `CREDITOS.md` conta a história inteira.
+
+Depois, ler `referencias/o-que-e-o-cerebro.md` e conduzir a explicação a partir dele. **Não despejar o arquivo inteiro** — é roteiro para você, não texto para colar.
 
 Fechar com a pergunta-âncora:
 

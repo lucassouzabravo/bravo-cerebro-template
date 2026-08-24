@@ -4,6 +4,8 @@ Você acabou de criar o seu cérebro.
 
 Isto aqui é um repositório — uma pasta versionada, que guarda histórico de tudo que muda dentro dela. Ele vai ser a memória do seu assistente de IA: o lugar onde ficam as suas decisões, os seus projetos, as suas pendências e o contexto do seu trabalho.
 
+> Esta estrutura foi criada por **Lucas Brassolotto** e pela **Banguela** 🐉 a partir do cérebro que os dois usam todo dia na Bravo, adaptado pra que outras pessoas pudessem ter o próprio. Não é modelo genérico: cada regra aqui existe porque alguma coisa deu errado antes e ensinou. A história está em [`CREDITOS.md`](CREDITOS.md).
+
 **Por que isso importa.** Hoje, quando você conversa com a IA, tudo morre na conversa. Amanhã ela não lembra do que vocês combinaram, você reexplica o mesmo contexto, e o que foi decidido não fica registrado em lugar nenhum. Com um cérebro, isso muda: o que importa vira arquivo, o arquivo fica no seu repositório, e toda conversa nova começa com a IA já sabendo quem você é e no que você está.
 
 ---
