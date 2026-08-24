@@ -93,7 +93,9 @@ Se ela responder com dúvida sobre onde as coisas ficam, mostrar o `MAPA.md` de 
 
 Invocar a sub-skill `iniciar-ambiente`.
 
-Ela instala o `gh` (o programa que fala com o GitHub), conecta a conta e confere a identidade do git.
+Ela confere o git, garante que o Credential Manager está ativo — ele **já vem dentro do Git for Windows**, não é instalação separada — e configura a identidade.
+
+**A única coisa que pode precisar ser instalada é o Git.** Nada de programa extra para falar com o GitHub: o navegador e o git comum resolvem.
 
 > ⚠️ **A autenticação é feita pela pessoa, no navegador dela.** Você mostra o código e o endereço; ela abre, cola e autoriza. Você **não digita senha, não digita token, não preenche credencial de ninguém** — nunca, nem se ela oferecer.
 

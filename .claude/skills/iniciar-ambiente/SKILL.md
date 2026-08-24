@@ -1,11 +1,11 @@
 ---
 name: iniciar-ambiente
 description: >
-  Prepara a máquina para o cérebro funcionar: confere e instala o git e o gh (o programa
-  que fala com o GitHub), conecta a conta da pessoa ao GitHub, e configura a identidade
-  do git. Chamada pelo /iniciar no passo 2, mas pode ser usada sozinha quando a pessoa
-  troca de máquina ou quando o push para de funcionar.
-  Triggers: "/iniciar-ambiente", "conecta meu github", "instala o gh".
+  Prepara a máquina para o cérebro funcionar: confere o git, confirma que o Credential
+  Manager (que vem junto com o Git for Windows) está ativo, e configura a identidade do
+  git. Chamada pelo /iniciar no passo 2, mas pode ser usada sozinha quando a pessoa troca
+  de máquina ou quando o envio para de funcionar.
+  Triggers: "/iniciar-ambiente", "conecta meu github", "o push parou de funcionar".
 disable-model-invocation: true
 ---
 

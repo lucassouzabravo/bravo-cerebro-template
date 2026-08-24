@@ -230,7 +230,8 @@ Se a Fase B não rodou, dizer por quê em uma linha — sem transformar em alarm
 
 | Sintoma | Causa | O que fazer |
 |---|---|---|
-| Pede usuário e senha no push | Credencial do git não configurada | `gh auth setup-git` |
+| Pede usuário e senha **no terminal**, em texto | Credential Manager desligado | `git config --global credential.helper manager` |
+| Abriu **janela do navegador** pedindo login | Normal — é o acesso sendo renovado | Entrar na conta e autorizar |
 | `non-fast-forward` | Outra máquina, ou colega da alçada, enviou antes | `git pull --rebase` e repetir. **Nunca `--force`** |
 | Conflito no rebase | Os dois lados escreveram no mesmo arquivo | Ver `referencias/conflito.md` |
 | `Permission denied` no inbox | Acesso da alçada não liberado | Anotar pendência (dono: Lucas) e encerrar na Fase A |

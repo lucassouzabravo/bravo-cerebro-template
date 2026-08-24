@@ -46,7 +46,7 @@ O cérebro pode ter mudado em outro computador. Puxar antes de ler:
 git -C "$CEREBRO" pull --rebase 2>&1
 ```
 
-**Se pedir usuário ou senha, ou falhar autenticando:** parar e avisar em linguagem simples — *"a conexão com o GitHub caiu. É uma coisa rápida de resolver: `gh auth login`. Te ajudo se quiser."* Nunca travar em silêncio dentro da skill.
+**Se pedir usuário ou senha, ou falhar autenticando:** parar e avisar em linguagem simples — *"a conexão com o GitHub caiu. Na próxima vez que a gente enviar, vai abrir uma janela pedindo pra você entrar na conta — é normal, é o Windows renovando o acesso. Te ajudo se travar."* Nunca travar em silêncio dentro da skill.
 
 **Se reclamar de mudança não commitada:** é trabalho de outra sessão. Guardar de lado, puxar, e devolver:
 

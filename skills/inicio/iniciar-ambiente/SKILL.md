@@ -1,25 +1,37 @@
 ---
 name: iniciar-ambiente
 description: >
-  Prepara a máquina para o cérebro funcionar: confere e instala o git e o gh (o programa
-  que fala com o GitHub), conecta a conta da pessoa ao GitHub, e configura a identidade
-  do git. Chamada pelo /iniciar no passo 2, mas pode ser usada sozinha quando a pessoa
-  troca de máquina ou quando o push para de funcionar.
-  Triggers: "/iniciar-ambiente", "conecta meu github", "instala o gh".
+  Prepara a máquina para o cérebro funcionar: confere o git, confirma que o Credential
+  Manager (que vem junto com o Git for Windows) está ativo, e configura a identidade do
+  git. Chamada pelo /iniciar no passo 2, mas pode ser usada sozinha quando a pessoa troca
+  de máquina ou quando o envio para de funcionar.
+  Triggers: "/iniciar-ambiente", "conecta meu github", "o push parou de funcionar".
 disable-model-invocation: true
 ---
 
 # iniciar-ambiente
 
-> Passo 2 do `/iniciar`. Instala software e autentica conta — por isso é `disable-model-invocation`.
+> Passo 2 do `/iniciar`.
 
 ## A regra que não se quebra
 
-**Você nunca digita credencial de ninguém.** Não digita senha, não digita token, não preenche formulário de login, não cola chave. Nem se a pessoa oferecer, nem se ela pedir, nem para "adiantar".
+**Você nunca digita credencial de ninguém.** Não digita senha, não digita token, não preenche formulário de login, não cola chave. Nem se a pessoa oferecer, nem para "adiantar".
 
-O caminho correto é o `gh` mostrar um código, a pessoa abrir o navegador **dela**, colar o código e autorizar. Você mostra as instruções e espera.
+Quem autentica é a pessoa, na tela dela.
 
-Se a pessoa colar um token no chat: avise que ela deve **revogá-lo** e gerar outro, porque ele passou por um canal que guarda histórico. Não use o token, não repita ele na resposta.
+Se ela colar um token no chat: avise que ele precisa ser **revogado** e gerado outro, porque passou por um canal que guarda histórico. Não use o token e não repita ele na resposta.
+
+---
+
+## O que a pessoa precisa ter, e é pouco
+
+| O quê | Por quê | É instalação separada? |
+|---|---|---|
+| **Git** | sem ele não existe repositório | sim, e é a única |
+| **Credential Manager** | é o que guarda o acesso ao GitHub | **não — vem dentro do Git** |
+| Conta no GitHub | onde o cérebro fica guardado | não é programa |
+
+> **Não instale o `gh` (GitHub CLI).** Ele é conveniente, mas é mais um programa para aprovar em máquina corporativa, e **não é necessário para nada** neste fluxo. Tudo que ele faria, o git comum e o navegador fazem.
 
 ---
 
@@ -28,119 +40,90 @@ Se a pessoa colar um token no chat: avise que ela deve **revogá-lo** e gerar ou
 Rodar e **mostrar a saída literal** antes de interpretar:
 
 ```bash
-echo "--- git ---"; git --version 2>&1 || echo "AUSENTE"
-echo "--- gh ---";  gh --version  2>&1 | head -1 || echo "AUSENTE"
-echo "--- conta github ---"; gh auth status 2>&1 | head -5 || echo "NAO CONECTADO"
-echo "--- identidade git ---"
-echo "nome:  $(git config --global user.name 2>/dev/null  || echo VAZIO)"
+echo "--- git ---"
+git --version 2>&1 || echo "AUSENTE"
+echo "--- quem guarda a credencial ---"
+git config --get credential.helper 2>&1 || echo "NENHUM"
+echo "--- identidade ---"
+echo "nome:  $(git config --global user.name  2>/dev/null || echo VAZIO)"
 echo "email: $(git config --global user.email 2>/dev/null || echo VAZIO)"
 ```
 
-Leia a saída e classifique em um dos quatro estados. **Não pule para instalar sem olhar** — na maioria das máquinas o git já está lá.
-
-| Estado | O que fazer |
+| O que apareceu | O que fazer |
 |---|---|
-| Tudo presente e conectado | Pular para o Passo 5 (confirmação) |
-| `gh` ausente | Passo 2, depois 3, depois 4 |
-| `gh` presente, conta não conectada | Passo 3 e 4 |
-| Identidade do git vazia | Passo 4 |
-
-> ⚠️ **`gh` instalado nem sempre aparece no PATH da sessão atual.** Se `gh --version` falhar mas a pessoa disser que já instalou, conferir os caminhos usuais antes de instalar de novo:
-> ```bash
-> ls "$PROGRAMFILES/GitHub CLI/gh.exe" "$LOCALAPPDATA/Programs/GitHub CLI/gh.exe" 2>/dev/null
-> ```
-> Se existir ali, o problema é PATH — resolver reabrindo o terminal, não reinstalando.
+| git ausente | Passo 2 |
+| `credential.helper` = `manager` | ótimo, é o esperado. Pular para o Passo 3 |
+| `credential.helper` vazio | Passo 2.1 |
+| identidade vazia | Passo 3 |
 
 ---
 
-## Passo 2 — Instalar o `gh`
+## Passo 2 — Instalar o Git (só se faltar)
 
-Explique antes, em uma frase, sem jargão:
+Explique em uma frase, sem jargão:
 
-> "Vou instalar um programinha oficial do GitHub. Ele é o que deixa eu criar e atualizar seu repositório sem você precisar mexer no site."
+> "O Git é o programa que faz essa pasta guardar histórico. É a única coisa que a gente precisa instalar."
 
-**Windows** (o caso padrão na Bravo):
-
-```bash
-winget install --id GitHub.cli --source winget --accept-package-agreements --accept-source-agreements
-```
-
-**macOS:**
+**Windows:**
 
 ```bash
-brew install gh
+winget install --id Git.Git --source winget --accept-package-agreements --accept-source-agreements
 ```
 
-Depois de instalar, **o terminal atual não enxerga o programa novo**. Isso é normal e é a causa nº1 de "instalei e não funcionou". Peça para a pessoa fechar e reabrir o Claude Code, e confirme na volta:
+Se o `winget` estiver bloqueado — comum em máquina corporativa — **não improvise instalação por script baixado da internet.** Mande o link oficial (`https://git-scm.com/download/win`), peça que a pessoa instale ou peça ao TI, e siga quando voltar.
+
+Depois de instalar, **o terminal atual não enxerga o programa novo.** Isso é normal e é a causa nº 1 de "instalei e não funcionou". Peça para fechar e reabrir o Claude Code, e confirme:
 
 ```bash
-gh --version
+git --version
 ```
 
-Se o `winget` não existir na máquina, não improvise instalação por script baixado da internet. Mande o link oficial (`https://cli.github.com`), peça para ela instalar pelo instalador, e siga quando voltar.
+### Passo 2.1 — Ligar o Credential Manager, se ele não estiver ativo
+
+Ele vem junto com o Git for Windows, mas pode estar desligado:
+
+```bash
+git config --global credential.helper manager
+git config --get credential.helper
+```
 
 ---
 
-## Passo 3 — Conectar a conta
+## Passo 3 — Identidade do git
 
-Explique o que vai acontecer **antes** de rodar, para a pessoa não se assustar com o código na tela:
-
-> "Agora você conecta sua conta. Vai aparecer um código de 8 caracteres aqui. Você copia, abre o link que eu vou te dar, cola lá e autoriza. Eu não vejo sua senha em momento nenhum."
-
-```bash
-gh auth login --hostname github.com --git-protocol https --web
-```
-
-Mostre a saída literal — o código está nela. Espere a pessoa confirmar que autorizou.
-
-Conferir, e mostrar a saída:
-
-```bash
-gh auth status
-```
-
-Tem que aparecer `Logged in to github.com as {conta}`. Se não aparecer, **não seguir**: repetir o passo. Configuração meio-feita quebra três passos depois, longe da causa.
-
-Aproveitar que o `gh` já autenticou e deixar o git usar essa credencial:
-
-```bash
-gh auth setup-git
-```
-
-Isso evita a pessoa ter que digitar login a cada envio.
-
----
-
-## Passo 4 — Identidade do git
-
-Todo registro no histórico leva nome e e-mail. Se estiverem vazios, o envio falha com uma mensagem que não explica nada.
+Todo registro no histórico leva nome e e-mail. Vazio, o envio falha com mensagem que não explica nada.
 
 Perguntar **uma coisa por vez**, e usar o e-mail corporativo:
 
 ```bash
 git config --global user.name  "{Nome Sobrenome}"
 git config --global user.email "{nome}@gobravo.com.br"
-```
-
-Conferir e mostrar:
-
-```bash
 git config --global user.name; git config --global user.email
 ```
 
 ---
 
-## Passo 5 — Confirmação
+## Passo 4 — Como a conta vai ser conectada, e por que ainda não é agora
 
-Fechar com o quadro do que ficou pronto, sem enfeite:
+Não existe passo de "fazer login" aqui, e isso confunde. Explique:
+
+> "A conexão com o GitHub acontece sozinha na **primeira vez** que a gente for enviar alguma coisa. Vai abrir uma janela do navegador, você entra na sua conta, autoriza, e nunca mais precisa. O Windows guarda no cofre do sistema."
+
+Isso acontece no **passo 6** do `/iniciar`, quando a estação for enviada pela primeira vez. Aqui a gente só deixa o terreno pronto.
+
+**O que a pessoa vai ver:** uma janela pedindo para entrar no GitHub, com botão de autorizar. É legítimo — é o próprio Git pedindo.
+
+---
+
+## Passo 5 — Confirmação
 
 ```
 Máquina pronta:
 
-  ✓ git        {versão}
-  ✓ gh         {versão}
-  ✓ conta      conectada como {usuário}
-  ✓ identidade {Nome} · {email}
+  ✓ git         {versão}
+  ✓ credencial  Credential Manager ativo (veio junto com o Git)
+  ✓ identidade  {Nome} · {email}
+  ⏳ conta       conecta sozinha no primeiro envio, com janela do navegador
 ```
 
 Se alguma linha não ficou verde, **dizer qual e por quê**, e não declarar o passo concluído.
@@ -151,9 +134,30 @@ Se alguma linha não ficou verde, **dizer qual e por quê**, e não declarar o p
 
 | Sintoma | Causa provável | O que fazer |
 |---|---|---|
-| `gh: command not found` logo depois de instalar | O terminal não recarregou o PATH | Fechar e reabrir o Claude Code |
-| `winget` não existe | Windows sem App Installer | Instalar pelo site oficial `cli.github.com` |
-| O navegador não abriu sozinho | Ambiente sem navegador padrão | Mostrar a URL e o código para a pessoa abrir na mão |
-| `gh auth status` diz não autenticado depois de autorizar | Autorizou em outra conta, ou fechou antes de concluir | Rodar `gh auth login` de novo e acompanhar até o fim |
-| Push pede usuário e senha | `gh auth setup-git` não rodou | Rodar `gh auth setup-git` |
-| A pessoa tem duas contas GitHub | Autenticou na pessoal em vez da de trabalho | `gh auth status` mostra qual; trocar com `gh auth switch` |
+| `git: command not found` logo após instalar | O terminal não recarregou | Fechar e reabrir o Claude Code |
+| `winget` bloqueado | Política da máquina | Link oficial, ou pedir ao TI. Não contornar |
+| Pede usuário e senha no terminal, em texto | Credential Manager desligado | `git config --global credential.helper manager` |
+| A janela do navegador não abre | Ambiente sem navegador padrão, ou política de SSO | Ver "Plano B" abaixo |
+| `Authentication failed` depois de autorizar | Autorizou em outra conta (pessoal em vez da de trabalho) | Limpar a credencial guardada no **Gerenciador de Credenciais do Windows** e repetir |
+| Funcionava e parou | Credencial expirou ou foi revogada | Repetir o primeiro envio; a janela abre de novo |
+
+---
+
+## Plano B — token, e só se o Credential Manager não der
+
+**Só use isto se o Passo 4 falhar de verdade.** É pior por três motivos: é um segredo dentro de um arquivo, ele expira sem avisar, e ensina um hábito que a gente prefere que ninguém tenha.
+
+Se for necessário:
+
+1. A pessoa gera um token em `github.com/settings/tokens` — **fine-grained**, só nos repositórios dela, permissão de **Contents: Read and write**, validade curta.
+2. **Ela cola num arquivo `.env` na raiz do cérebro, com as próprias mãos.** Você não digita, não vê e não repete o valor.
+3. Confirmar que o `.gitignore` bloqueia o arquivo — **antes** de qualquer envio:
+
+```bash
+git check-ignore -v .env || echo "PARE: o .env NAO esta protegido"
+```
+
+Se essa linha não confirmar a proteção, **parar tudo**. Um token que entra no histórico do git fica lá para sempre, e apagar o arquivo depois não resolve.
+
+4. Registrar em `TOOLS.md` apenas o **nome** da variável e onde ela mora — nunca o valor.
+5. Avisar a data de expiração, para não virar o mistério de "parou de funcionar e ninguém sabe por quê".

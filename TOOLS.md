@@ -16,14 +16,14 @@ Catálogo das ferramentas e integrações deste cérebro. Lido **sob demanda**, 
 
 | Referência segura | Local real | Regra |
 |---|---|---|
-| `GITHUB_TOKEN` | gerenciado pelo `gh` CLI (`gh auth status`) | Nunca colar em comando nem em arquivo versionado |
+| *(nenhum token)* | o acesso ao GitHub fica no **cofre do Windows**, guardado pelo Credential Manager | Não existe arquivo para vazar — é o desenho preferido |
 | {VARIAVEL} | {LOCAL} | {REGRA} |
 
 ## Integrações ativas
 
 | Ferramenta | Para que serve | Como está conectada | Testada em |
 |---|---|---|---|
-| GitHub | guarda e versiona este cérebro | `gh` CLI, autenticado na conta de {PESSOA} | {DATA} |
+| GitHub | guarda e versiona este cérebro | Credential Manager, na conta de {PESSOA} | {DATA} |
 | {FERRAMENTA} | {PARA_QUE} | {COMO} | {DATA} |
 
 ## Ferramentas locais
@@ -31,7 +31,7 @@ Catálogo das ferramentas e integrações deste cérebro. Lido **sob demanda**, 
 | Comando | Para que serve | Como conferir se está instalado |
 |---|---|---|
 | `git` | versiona o cérebro | `git --version` |
-| `gh` | fala com o GitHub | `gh --version` e `gh auth status` |
+| *(nada além do git)* | falar com o GitHub | `git config --get credential.helper` deve responder `manager` |
 | `python` | roda os utilitários de `scripts/` | `python --version` |
 
 ## Sistemas da Bravo que eu conheço mas não acesso

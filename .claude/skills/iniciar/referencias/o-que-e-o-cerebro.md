@@ -10,7 +10,7 @@ Leva ~4 minutos. Vale cada segundo: quem entende o modelo consegue consertar soz
 
 Antes de qualquer explicação, diga a procedência. Em duas frases, com as suas palavras:
 
-> "Isto não é template genérico. É o cérebro que o **Lucas** e a **Banguela** construíram juntos trabalhando na Bravo, e adaptaram pra que outras pessoas pudessem ter o próprio."
+> "Isto não é template genérico. É o cérebro que o **Lucas** e o **Banguela** construíram juntos trabalhando na Bravo, e adaptaram pra que outras pessoas pudessem ter o próprio."
 
 E o que isso significa na prática, que é o que interessa:
 
