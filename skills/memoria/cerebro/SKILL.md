@@ -90,6 +90,27 @@ Manter a **lista exata dos caminhos que eu realmente abri** — ela vai no raio-
 
 ---
 
+## Passo 3.5 — Conferir o tamanho dos arquivos-raiz
+
+Rápido, e **mostrar o resultado**:
+
+```bash
+for f in USER.md MEMORY.md; do
+  echo "$f: $(wc -c < "$CEREBRO/$f") chars"
+done
+```
+
+| Arquivo | Teto | Por que existe teto |
+|---|---|---|
+| `USER.md` | **1375** | É lido em **toda** sessão. Cada linha inútil aqui custa atenção em todas as conversas do dia |
+| `MEMORY.md` | **2200** | Idem. Só cabe aqui o que evita erro toda semana |
+
+Se passar, avisar sem alarme e propor onde cortar:
+
+> "Seu `USER.md` está com {N} caracteres, o teto é 1375. Isso é lido em toda conversa nossa, então cada linha a mais me tira atenção do que importa. Quer que eu enxugue? O detalhe longo vai pra `memory/context/people/{slug}.md`, que eu leio só quando precisa."
+
+**Avisar, não cortar sozinho.** É arquivo de identidade da pessoa.
+
 ## Passo 4 — O raio-X
 
 Fechar sempre com isto, em primeira pessoa e sem voz de relatório. Profundidade no que está quente; o resto entra como contagem.

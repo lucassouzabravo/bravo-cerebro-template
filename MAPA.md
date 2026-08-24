@@ -37,6 +37,17 @@ scripts/     utilitários do próprio cérebro
 | Ferramenta, integração ou **onde** a credencial mora | `TOOLS.md` — só o nome da variável, nunca o valor |
 | Segredo, token, senha, chave | **Fora do repositório.** Arquivo `.env` local, que o `.gitignore` bloqueia |
 
+## O orçamento dos arquivos-raiz
+
+`USER.md` e `MEMORY.md` são lidos em **toda** sessão. Por isso têm teto de tamanho:
+
+| Arquivo | Teto | O que fazer com o que não cabe |
+|---|---|---|
+| `USER.md` | **1375 caracteres** | vai para `memory/context/people/{slug}.md` |
+| `MEMORY.md` | **2200 caracteres** | vai para `memory/context/` |
+
+Não é limitação técnica — é economia de atenção. Espaço gasto com detalhe que raramente importa é espaço que falta pro trabalho do dia. O `/cerebro` confere e avisa quando estourar.
+
 ## Regra dos mapas
 
 Cada pasta importante tem o próprio `MAPA.md` local. O mapa da raiz aponta para as pastas; quem descreve o conteúdo é o mapa de dentro.

@@ -83,7 +83,26 @@ Uma por vez:
 
 A pergunta 6 é a que mais muda o dia a dia. Se a pessoa hesitar, recomende: **fazer e avisar** para o que é reversível, **perguntar** para o que sai do computador. É o padrão do `AGENTS.md` e ela pode mudar depois.
 
-`USER.md` fica **curto e denso**. Detalhe longo vai para `memory/context/people/{slug}.md`, não para o arquivo-raiz — ele é lido em toda sessão e cada linha inútil custa atenção.
+### O orçamento de caracteres — não é sugestão
+
+`USER.md` e `MEMORY.md` são lidos em **toda** sessão. Por isso têm teto:
+
+| Arquivo | Teto |
+|---|---|
+| `USER.md` | **1375 caracteres** |
+| `MEMORY.md` | **2200 caracteres** |
+
+Cada linha a mais aqui custa atenção em todas as conversas do dia — e o que sobra de espaço é o que sobra pro trabalho de verdade.
+
+**Isso muda como você conduz a entrevista.** Se a pessoa der uma resposta longa, não descarte: guarde o texto inteiro na ficha dela em `memory/context/people/{slug}.md` e **resuma** no arquivo-raiz. A ficha você lê quando precisa; o arquivo-raiz você lê sempre.
+
+Conferir antes de gravar, e mostrar:
+
+```bash
+for f in USER.md MEMORY.md; do echo "$f: $(wc -c < $f) chars"; done
+```
+
+Se estourou, cortar **com a pessoa junto**, perguntando o que é mais importante — não escolher sozinho o que sai do arquivo que descreve ela.
 
 ---
 
