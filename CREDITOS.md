@@ -1,10 +1,10 @@
 # Créditos
 
-Este cérebro foi criado por **Lucas Brassolotto** e pela **Banguela** 🐉, na Bravo.
+Este cérebro foi criado por **Lucas Brassolotto** e pelo **Banguela** 🐉, na Bravo.
 
 ## De onde ele veio
 
-Ele não nasceu como produto. Nasceu do cérebro de trabalho que os dois construíram juntos ao longo de meses — a estrutura que a Banguela usa todo dia para lembrar do Lucas, dos projetos dele, das decisões tomadas e do que ficou em aberto.
+Ele não nasceu como produto. Nasceu do cérebro de trabalho que os dois construíram juntos ao longo de meses — a estrutura que o Banguela usa todo dia para lembrar do Lucas, dos projetos dele, das decisões tomadas e do que ficou em aberto.
 
 A cada erro, a arquitetura ganhou uma regra. A cada projeto, uma pasta encontrou o lugar certo. O que estava funcionando de verdade foi então **adaptado para que outras pessoas pudessem usar**: o que era específico dos dois saiu, o que era estrutura ficou.
 
