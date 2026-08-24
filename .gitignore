@@ -1,0 +1,28 @@
+# Segredos — nunca versionar
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+auth.json
+
+# Rascunho privado — fica só na sua máquina
+privado/
+**/privado/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

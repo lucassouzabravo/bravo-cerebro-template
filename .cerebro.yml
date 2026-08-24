@@ -1,0 +1,49 @@
+# Endereços deste cérebro.
+# Um lugar só. As skills /cerebro e /salve leem daqui — nunca têm endereço escrito dentro delas.
+# O /iniciar preenche o bloco `pessoal` e escolhe a alçada. O resto já vem pronto.
+
+pessoal:
+  repo: "{REPO_PESSOAL}"        # ex: seu-usuario/meu-cerebro
+  branch: main
+  caminho: "~/bravo/pessoal"
+
+# A alçada da pessoa. O /iniciar copia para cá o bloco correspondente de `alcadas`.
+alcada:
+  nome: "{ALCADA}"              # gerencia | lideranca | analista
+  repo: "{REPO_INBOX}"
+  branch: staging
+  caminho: "~/bravo/inbox"
+  slug: "{SLUG}"                # a pasta da pessoa dentro do inbox
+
+# Catálogo fixo. O acesso a cada um é liberado individualmente pelo Lucas (AI Operation).
+alcadas:
+  gerencia:
+    repo: lucassouzabravo/bravo-inbox-gerencia
+  lideranca:
+    repo: lucassouzabravo/bravo-inbox-lideranca
+  analista:
+    repo: lucassouzabravo/bravo-inbox-analista
+
+# As camadas do cérebro coletivo, com a pergunta que cada uma responde.
+# O /salve usa a coluna `pergunta` para explicar a classificação em linguagem normal.
+# ATENÇÃO: a numeração tem um buraco de propósito — a camada 6 está em revisão
+# no cérebro coletivo e não deve ser oferecida.
+camadas:
+  - id: 1-inventario
+    nome: Inventário
+    pergunta: "o que existe aqui"
+  - id: 2-tarefas
+    nome: Tarefas
+    pergunta: "o que se faz, passo a passo"
+  - id: 3-papeis
+    nome: Papéis
+    pergunta: "quem faz e o que pode decidir"
+  - id: 4-dominio
+    nome: Domínio
+    pergunta: "o que esse termo quer dizer"
+  - id: 5-julgamento
+    nome: Julgamento
+    pergunta: "como uma decisão real foi tomada"
+  - id: 7-passagens
+    nome: Passagens
+    pergunta: "quem entrega o quê para quem"
