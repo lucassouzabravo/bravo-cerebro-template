@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0,0)" data-frame="Exemplo — lembrete de aniversário">
+<rect data-type="frame" x="0" y="0" width="5500" height="4100" fill="#FFFFFF" data-title="Exemplo — lembrete de aniversário" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="n1" data-end="n2" data-arrow="end" data-content="1 item" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="n2" data-end="n3" data-arrow="end" data-content="lista" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="n3" data-end="d1" data-arrow="end" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="d1" data-end="d1s" data-arrow="end" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="d1" data-end="d1n" data-arrow="end" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="d1s" data-end="n4" data-arrow="end" data-content="sim" />
+<line x1="0" y1="0" x2="1" y2="1" stroke="#000000" stroke-width="2" data-start="d1n" data-end="n5" data-arrow="end" data-content="não" />
+<circle id="d1" cx="3580" cy="2600" r="5" fill="#000000" stroke="#1a1a1a" />
+<circle id="d1s" cx="3580" cy="1900" r="5" fill="#000000" stroke="#1a1a1a" />
+<circle id="d1n" cx="3580" cy="3300" r="5" fill="#000000" stroke="#1a1a1a" />
+<rect id="n1" x="100" y="2540" width="440" height="120" rx="60" data-content="1 · Agenda diária 8h" fill="#f2c744" data-text-color="#ffffff" data-font-size="16" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n2" x="1440" y="2540" width="440" height="120" rx="14" data-content="2 · Busca aniversariantes" fill="#4b8bf5" data-text-color="#ffffff" data-font-size="16" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n3" x="2780" y="2480" width="440" height="240" data-shape="rhombus" rx="14" data-content="3 · Achou alguém?" fill="#ff8c00" data-text-color="#ffffff" data-font-size="16" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n4" x="4280" y="1840" width="440" height="120" data-shape="hexagon" rx="14" data-content="4 · Envia WhatsApp" fill="#e0457b" data-text-color="#ffffff" data-font-size="16" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n5" x="4280" y="3240" width="440" height="120" rx="16" data-content="5 · Grava log: nada hoje" fill="#2d3142" data-text-color="#ffffff" data-font-size="16" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="lgc0" x="560" y="96" width="195" height="70" rx="14" data-content="gatilho" fill="#f2c744" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc1" x="765" y="96" width="195" height="70" rx="14" data-content="consulta" fill="#4b8bf5" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc2" x="970" y="96" width="195" height="70" rx="14" data-content="codigo" fill="#8b5cf6" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc3" x="1175" y="96" width="195" height="70" rx="14" data-content="decisao" fill="#ff8c00" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc4" x="560" y="176" width="195" height="70" rx="14" data-content="juntar" fill="#00b86b" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc5" x="765" y="176" width="195" height="70" rx="14" data-content="subfluxo" fill="#e0457b" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc6" x="970" y="176" width="195" height="70" rx="14" data-content="loop" fill="#00c4cc" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="lgc7" x="1175" y="176" width="195" height="70" rx="14" data-content="banco" fill="#2d3142" data-text-color="#ffffff" data-font-size="15" data-font-family="Roboto Mono" stroke="#1a1a1a" />
+<rect id="n1f1" x="100" y="2702" width="440" height="26" data-content="Dispara a rotina todo dia às 8h." fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n1f2" x="100" y="3012" width="440" height="26" data-content="Campos" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n2f1" x="1440" y="2702" width="440" height="26" data-content="Busca quem faz aniversário hoje." fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n2f2" x="1440" y="3012" width="440" height="26" data-content="Campos" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n3f1" x="2780" y="2762" width="440" height="26" data-content="Decide se tem alguém pra notificar hoje." fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n3f2" x="2780" y="3072" width="440" height="26" data-content="Campos" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n4f1" x="4280" y="1772" width="440" height="26" data-content="Manda a mensagem de parabéns pelo WhatsApp." fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n4f2" x="4280" y="1462" width="440" height="26" data-content="Campos" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n5f1" x="4280" y="3172" width="440" height="26" data-content="Registra que rodou e não tinha ninguém." fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n5f2" x="4280" y="2862" width="440" height="26" data-content="Campos" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="t12ft" x="770" y="2519" width="440" height="26" data-content="sai do 1 · entra no 2" fill="#d0d0d0" data-text-color="#333333" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="t12fo" x="770" y="2620" width="440" height="26" data-content="Observações" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="t23ft" x="2110" y="2519" width="440" height="26" data-content="sai do 2 · entra no 3" fill="#d0d0d0" data-text-color="#333333" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="t23fo" x="2110" y="2620" width="440" height="26" data-content="Observações" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="lg0" x="100" y="60" width="400" height="26" data-content="Como ler este quadro" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="lg1" x="560" y="60" width="800" height="26" data-content="Legenda de cores · a cor diz de que categoria o nó é" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="lg2" x="560" y="320" width="800" height="26" data-content="A forma diz o que o nó faz com o dado" fill="#ededed" data-text-color="#6e6e6e" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="n1p0" data-type="sticky" x="140" y="2738" width="359" height="234" data-color="yellow" data-content="Gatilho fixo, sem entrada. Existe só pra dar a largada do dia." />
+<rect id="n2p0" data-type="sticky" x="1480" y="2738" width="359" height="234" data-color="yellow" data-content="Consulta direta na base de clientes, filtrando pela data de hoje." />
+<rect id="n3p0" data-type="sticky" x="2820" y="2798" width="359" height="234" data-color="yellow" data-content="Se a lista veio vazia, não faz sentido seguir seguir — vira &quot;não&quot;." />
+<rect id="n4p0" data-type="sticky" x="4320" y="1528" width="359" height="234" data-color="yellow" data-content="Chamada a um subfluxo à parte — é ele quem fala com a API do WhatsApp." />
+<rect id="n5p0" data-type="sticky" x="4320" y="2928" width="359" height="234" data-color="yellow" data-content="Sem isso, uma falha silenciosa da consulta pareceria igual a &quot;não tinha ninguém&quot;." />
+<rect id="lgp0" data-type="sticky" x="140" y="96" width="319" height="208" data-color="yellow" data-content="Amarelo é sempre &quot;o que faz&quot;. Observação (se houver) vai em card cinza." />
+<rect id="lgp1" data-type="sticky" x="140" y="334" width="319" height="208" data-color="yellow" data-content="Forma diz o verbo do nó: pílula dispara, retângulo processa, losango decide." />
+<rect id="t12o0" x="810" y="2661" width="360" height="180" rx="16" data-content="Sem payload: é só o disparo do relógio." fill="#f5f5f5" data-text-color="#1a1a1a" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<rect id="t23o0" x="2150" y="2661" width="360" height="180" rx="16" data-content="Uma lista, não um item — pode ter zero, um ou vários aniversariantes." fill="#f5f5f5" data-text-color="#1a1a1a" data-font-size="13" data-font-family="roboto_mono" stroke="#1a1a1a" />
+<textArea id="n1l" x="100" y="3053" width="440" font-size="20" font-family="Plex Mono" fill="#333333" text-align="left">hora = 08:00</textArea>
+<textArea id="n2l" x="1440" y="3053" width="440" font-size="20" font-family="Plex Mono" fill="#333333" text-align="left">1. data = hoje<br />2. campo = data_nascimento</textArea>
+<textArea id="n3l" x="2780" y="3113" width="440" font-size="20" font-family="Plex Mono" fill="#333333" text-align="left">lista.length &gt; 0</textArea>
+<textArea id="n4l" x="4280" y="1391" width="440" font-size="20" font-family="Plex Mono" fill="#333333" text-align="left">telefone<br />nome</textArea>
+<textArea id="n5l" x="4280" y="2819" width="440" font-size="20" font-family="Plex Mono" fill="#333333" text-align="left">motivo = sem_aniversariante</textArea>
+<textArea id="t12lt" x="770" y="2560" width="440" font-size="14" font-family="Roboto Mono" fill="#333333" text-align="left">{ }</textArea>
+<textArea id="t23lt" x="2110" y="2560" width="440" font-size="14" font-family="Roboto Mono" fill="#333333" text-align="left">[{ nome, telefone, data_nascimento }, ...]</textArea>
+<textArea id="lgf" x="570" y="404" width="780" font-size="14" font-family="Roboto Mono" fill="#333333" text-align="left">pílula = dispara o fluxo<br />retângulo = processa, transforma ou consulta<br />losango = decide um caminho<br />círculo = repete<br />elipse = espera<br />hexágono = sai do fluxo e volta<br />canto forte = grava o resultado</textArea>
+</g>
+</svg>

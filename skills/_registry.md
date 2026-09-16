@@ -45,6 +45,27 @@ Formam uma cadeia, nesta ordem:
 | `executing-plans` | Existe plano em arquivo para tocar |
 | `verification-before-completion` | Antes de dizer que terminou. Sempre |
 
+## Comunicação e documentos
+
+| Skill | Quando usar |
+|---|---|
+| `comm-coach` | Preparar comunicação com executivo, par ou equipe antes de redigir a mensagem. |
+| `bravo-documents` | Criar ou revisar documento corporativo da Bravo. |
+
+## Design e visualização
+
+| Skill | Quando usar |
+|---|---|
+| `process-visualizer` | Explicar visualmente um fluxo, dependência, decisão ou passagem de dados. |
+| `bravo-dark-html` | Criar relatório, dashboard ou página HTML interna no padrão visual Bravo. |
+| `fluxo-n8n-miro` | Desenhar ou validar no Miro um fluxo n8n baseado na topologia real do JSON. |
+
+## Desenvolvimento
+
+| Skill | Quando usar |
+|---|---|
+| `skill-creator` | Criar, melhorar ou avaliar uma skill antes de colocá-la em uso recorrente. |
+
 ## As regras deste registro
 
 - **Nome único no cérebro inteiro.** O Claude Code usa uma pasta plana, então duas categorias com o mesmo nome de pasta colidem. O gerador aborta se acontecer.

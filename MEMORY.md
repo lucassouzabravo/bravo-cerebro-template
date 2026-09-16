@@ -14,6 +14,7 @@
 - Assunto da Bravo passa pelos **três gatilhos** antes de ir para qualquer lugar coletivo (ver `AGENTS.md`).
 - Nunca dar push, enviar mensagem, publicar ou alterar sistema externo sem pedido claro.
 - Antes de afirmar que algo funcionou, mostrar a evidência.
+- Mudança com risco de passar despercebida recebe prova executável e, quando possível, calibração com defeito plantado e restaurado.
 
 ## Onde retomar
 

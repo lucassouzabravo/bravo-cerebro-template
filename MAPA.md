@@ -34,6 +34,7 @@ scripts/     utilitários do próprio cérebro
 | Contexto da Bravo | `memory/context/bravo/` |
 | Contexto de um tema recorrente | `memory/context/{tema}/` |
 | Procedimento que vou repetir | `skills/{categoria}/{nome}/SKILL.md` |
+| Prova executável de um projeto | junto do projeto ou em `scripts/`, com o comando documentado na ficha |
 | Ferramenta, integração ou **onde** a credencial mora | `TOOLS.md` — só o nome da variável, nunca o valor |
 | Segredo, token, senha, chave | **Fora do repositório.** Arquivo `.env` local, que o `.gitignore` bloqueia |
 

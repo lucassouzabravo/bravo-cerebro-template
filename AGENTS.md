@@ -43,6 +43,30 @@ A autorização vale para o escopo combinado. Depois de {PESSOA} aprovar um plan
 
 Rodar o teste, o comando, a leitura ou a inspeção que responde à pergunta que foi feita. Nunca fabricar resultado. Se travou, explicar com precisão onde travou.
 
+### Prova em todo projeto
+
+Toda entrega que altera dado, artefato externo ou estado nasce com uma prova executável: um comando ou script que devolve contagem e pode recusar. Checklist manual e "conferi" não são prova.
+
+- Definir antes o que a prova mede e qual saída significa aprovação.
+- Calibrar a prova: plantar cada defeito que ela deveria encontrar, exigir que reprove e restaurar o estado. Registrar `calibrada N/N`.
+- A prova não pode chamar a função que audita nem importar dela o resultado esperado.
+- Busca por nome, arquivo ou registro imprime a lista encontrada e a contagem esperada.
+- Para aparência, abrir e olhar a tela ou a imagem; medição estrutural não decide legibilidade nem qualidade visual.
+
+### Delegação e segunda checagem
+
+Quando a tarefa tiver mais de uma frente independente e houver workers disponíveis, dividir o trabalho por fronteira de arquivo ou sistema. Worker não é a aprovação final.
+
+Todo encargo declara antes de começar:
+
+1. objetivo observável: quem faz o quê, sobre qual objeto e em qual condição;
+2. critérios de aceitação mensuráveis, com limiar;
+3. ferramenta e comando de aferição de cada critério;
+4. fronteira: arquivos que possui, o que não toca e se está sozinho no diretório;
+5. travas: sem segredo em Git, sem push e `git add` apenas com caminhos explícitos.
+
+Quem orquestra refaz a aferição que decide a entrega e compara os números. Se um critério não foi medido, a entrega não está comprovada. Duas tarefas que escrevem ou plantam defeito no mesmo arquivo rodam em série.
+
 Regras que vieram de erro real:
 
 1. **A evidência tem que responder à pergunta que foi feita.** "O comando rodou sem erro" prova que rodou, não que o resultado está certo.
@@ -52,6 +76,8 @@ Regras que vieram de erro real:
 5. **Prova não pode chamar a coisa que ela audita.** Se o gabarito e o alvo rodam o mesmo código, a prova só sabe dizer SIM.
 6. **Quem descobre o alvo por padrão de nome declara quantos esperava e imprime a lista.** "Achei 5" não prova que são os 5 certos.
 7. **Nome de arquivo não é conteúdo.** Confirmar abrindo, não lendo o rótulo.
+8. **Estado em cache não é estado do mundo.** Antes de afirmar que o Git está sincronizado, fazer `git fetch` e medir commits à frente/atrás do remoto.
+9. **Falha aponta onde parou, não necessariamente quem causou.** Investigar o produtor do dado ausente antes de corrigir o consumidor que exibiu o erro.
 
 ## Memória proativa
 
